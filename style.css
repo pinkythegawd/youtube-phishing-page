@@ -1,0 +1,831 @@
+* {
+    box-sizing: border-box;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background) !important;
+}
+
+ :root {
+    --icon-idle: #606060 !important;
+    --background: #f9f9f9 !important;
+    --blue: #065fd4 !important;
+}
+
+.center-dis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* -------------------------------------------- Container */
+
+.container {
+    max-width: 1316px !important;
+    padding: 0 !important;
+    /* margin-right: 2.8em !important; */
+}
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0 !important;
+    }
+}
+
+
+/* -------------------------------------------- Link */
+
+.link1 {
+    cursor: pointer;
+    margin-bottom: 0 !important;
+}
+
+.link1 p {
+    margin-bottom: 0 !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+.link1_detail {
+    padding: 1em;
+    width: 45%;
+    display: none;
+    background-color: #d9d9d9;
+    margin: 0 0 0 0;
+}
+
+.link1_detail p {
+    margin: 0 0 0 0;
+    float: left;
+}
+
+
+/* -------------------------------------------- Button */
+
+
+/* -------------------------------------------- Modals */
+
+
+/* The Modal (background) */
+
+.myModal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 5px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: .05rem;
+}
+
+
+/* Modal Content */
+
+.myModal-content {
+    width: 45% !important;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+}
+
+.myModal-content p {
+    margin: 0;
+}
+
+
+/* The Close Button */
+
+.myClose {
+    color: #aaaaaa;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.myClose:hover,
+.myClose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* -------------------------------------------- Nav bar */
+
+.nav-bar {
+    z-index: 99;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 3.5em;
+    background-color: white;
+    max-width: 100vw;
+}
+
+.menu-bar {
+    margin: 0 1em 0 0;
+    padding: .5em;
+    width: 2.5em;
+    height: 2.5em;
+    cursor: pointer;
+}
+
+.youtube-logo {
+    display: inherit;
+    cursor: pointer;
+}
+
+.youtube-logo p {
+    font-size: xx-small;
+    margin: 0 0 0 .2em;
+    color: var(--icon-idle);
+    font-weight: 400;
+}
+
+
+/* search-bar */
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 .5rem;
+    padding: 0 12em;
+    height: 2em;
+}
+
+.search-input {
+    width: 100%;
+    font-size: inherit;
+    padding: .4em 0 .4em .7em;
+    border: 1px solid #cccccc;
+    border-top-left-radius: .12em;
+    border-bottom-left-radius: .12em;
+}
+
+.search-input:focus {
+    outline: .08em solid var(--blue);
+}
+
+.fa-search {
+    width: 1.25em;
+    height: 1.25em;
+    font-size: small;
+    color: var(--icon-idle);
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.25rem;
+    border: 1px solid #cccccc;
+    background-color: #f8f8f8;
+    border-left: none;
+    border-top-right-radius: .12em;
+    border-bottom-right-radius: .12em;
+    cursor: pointer;
+    width: 4em;
+}
+
+.search-btn:hover {
+    background-color: #F0F0F0;
+}
+
+
+/* tool-bar */
+
+.tool-bar {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    gap: .5rem;
+}
+
+.icon-tool {
+    padding: .5em;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 0;
+    cursor: pointer;
+}
+
+.sign-in {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+    cursor: pointer;
+    border: .08em solid var(--blue);
+    padding: 5px 11px;
+    border-radius: .12em;
+    height: 2.5em;
+}
+
+.sign-in p {
+    margin: 0 0 0 .5em;
+    color: var(--blue);
+    font-size: .9em;
+    font-weight: 500;
+}
+
+.loging-in {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 11px;
+    border-radius: .12em;
+    height: 2.5em;
+}
+
+
+/* -------------------------------------------- Content 1 */
+
+.content-1 {
+    background-color: white;
+    display: block;
+    padding: 6em 1em;
+}
+
+.content-1 h2 {
+    margin: 1.5em 0;
+    /* font-size: 3.2rem; */
+    font-weight: 300;
+    /* line-height: 4rem; */
+    white-space: pre-line;
+}
+
+.content-1 img {
+    width: 552px;
+}
+
+.content-1 button {
+    padding: 0.625em 1em;
+    border-radius: .12em !important;
+}
+
+.detail-content {
+    margin: 1.5em;
+}
+
+.detail-content h4 {
+    margin: 0;
+}
+
+.detail-content h6 {
+    margin-top: 12px;
+}
+
+
+/* -------------------------------------------- Content 2 */
+
+.content-2 {
+    padding: 0 5vw;
+    height: 23.75em;
+}
+
+
+/* -------------------------------------------- Content 3 */
+
+.content-3 {
+    height: 34.375em;
+    width: 100%;
+}
+
+.content-3-bg {
+    background-image: url('img/ytr_lp2_story_music_neutral_ytp_on_android_device_desktop_2880x1620.jpg');
+    box-sizing: border-box;
+    min-height: 550px;
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10vw;
+}
+
+
+/* -------------------------------------------- Content 4 */
+
+.content-4 {
+    height: 34.375em;
+    width: 100%;
+}
+
+.content-4-bg {
+    background-image: url('img/ytr_lp2_story_music_neutral_ytp_music_desktop_2880x1620.jpg');
+    box-sizing: border-box;
+    min-height: 550px;
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10vw;
+    color: #fff;
+}
+
+
+/* -------------------------------------------- Content 5 */
+
+.content-5 {
+    width: 65%;
+    margin: 0 auto;
+}
+
+
+/* Accordient */
+
+.accordion {
+    padding: 1em 0em;
+}
+
+.accordionTab {
+    font-size: 18px;
+}
+
+
+/* ------------------------------------------------------------------------------------------------ */
+
+
+/* -------------------------------------------- Link */
+
+.link1 {
+    cursor: pointer;
+    margin-bottom: 0 !important;
+}
+
+.link1 p {
+    margin-bottom: 0 !important;
+}
+
+a:hover {
+    text-decoration: none !important;
+}
+
+.link1_detail {
+    padding: 1em;
+    width: 45%;
+    display: none;
+    background-color: #d9d9d9;
+    margin: 0 0 0 0;
+}
+
+.link1_detail p {
+    margin: 0 0 0 0;
+    float: left;
+}
+
+
+/* -------------------------------------------- Button */
+
+
+/* -------------------------------------------- Modals */
+
+
+/* The Modal (background) */
+
+.myModal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    padding-top: 5px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: .05rem;
+}
+
+
+/* Modal Content */
+
+.myModel-dialog {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.myModal-head {
+    /* max-height: 700px; */
+    width: 45% !important;
+    background-color: #444444;
+    color: #ffffff;
+    padding: 20px 24px 20px 24px;
+    margin: auto;
+    border: 1px solid #888888;
+    border-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.close-icon {
+    display: inline;
+    left: 0;
+    padding: 0 12px;
+}
+
+.head-txt {
+    display: inline;
+    padding: 0 0 0 24px;
+}
+
+.head-txt p {
+    margin: 0;
+}
+
+.myModal-content {
+    max-height: 700px;
+    width: 45% !important;
+    color: #ffffff;
+    padding: 0 24px 24px 24px;
+    margin: auto;
+    border: 1px solid #888;
+    background-color: #fff;
+}
+
+.header-content {
+    margin: 0 -24px;
+    font-size: 13px;
+}
+
+.yt-pre-black {
+    padding: 0 24px;
+    background-color: #444444;
+}
+
+.yt-wallet {
+    float: left;
+    width: 100px;
+    padding-right: 16px;
+}
+
+.yu-img {
+    width: 100%;
+    height: auto;
+}
+
+.yt-line-txt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ytp {
+    padding: 8px 0 16px 0;
+    display: inline;
+}
+
+.trial-line-txt {
+    display: inline;
+    align-self: center;
+}
+
+.charge-area {
+    background-color: #f2f2f2;
+    color: #000;
+    padding: 24px 0;
+}
+
+.charge {
+    padding: 0 24px;
+    margin-bottom: 24px;
+}
+
+.ch-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.charge-txt {
+    display: inline;
+}
+
+.total {
+    margin: 3px;
+    margin-bottom: 0;
+    padding: 0 24px;
+}
+
+.total-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pay-content {
+    color: #000;
+}
+
+.pay-txt {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+.g-pay {
+    display: inline;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    padding: 0 25px 0 10px;
+}
+
+.cre-txt {
+    display: inline;
+    padding: 16px 0;
+    font-size: 15px;
+}
+
+
+/* Credit card animation */
+
+.form__select_1:active+.form__selected_1 {
+    color: #065fd4;
+}
+
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+}
+
+.form__input {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: var(--normal-font-size);
+    border-bottom: 1px solid #CCC;
+    outline: none;
+    padding-top: 1rem;
+    padding-bottom: 0.4rem;
+    background: none;
+    box-sizing: border-box;
+}
+
+.form__label {
+    position: absolute;
+    left: 0.7rem;
+    top: 1rem;
+    padding: 0 .25rem;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 15px;
+    transition: .3s;
+    z-index: 1;
+}
+
+
+/*Input focus move up label*/
+
+.form__input:focus+.form__label {
+    top: -.5rem;
+    font-size: 13px;
+    color: #065fd4;
+    font-weight: 500;
+    z-index: 10;
+}
+
+
+/*Input focus sticky top label*/
+
+.form__input:not(:placeholder-shown).form__input:not(:focus)+.form__label {
+    top: -.5rem;
+    font-size: 13px;
+    font-weight: 500;
+    z-index: 10;
+}
+
+
+/*Input focus*/
+
+.form__input:focus {
+    transition: all 0.2s linear;
+    border-bottom: 1.5px solid #065fd4;
+}
+
+
+/* Animation End */
+
+.permission-content {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+.per-area {
+    margin: 8px 0;
+}
+
+.button-wrapper {
+    margin-top: 24px;
+    text-align: left;
+    overflow: hidden;
+}
+
+.buy-btn {
+    width: 100%;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+
+/* The Close Button */
+
+.myClose {
+    color: #aaaaaa;
+    float: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.myClose:hover,
+.myClose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* -------------------------------------------- Nav bar */
+
+.nav-bar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height: 3.5em;
+    background-color: white;
+}
+
+.menu-bar {
+    margin: 0 1em 0 0;
+    padding: .5em;
+    width: 2.5em;
+    height: 2.5em;
+    cursor: pointer;
+}
+
+.youtube-logo {
+    display: inherit;
+    cursor: pointer;
+}
+
+.youtube-logo p {
+    font-size: xx-small;
+    margin: 0 0 0 .2em;
+    color: var(--icon-idle);
+    font-weight: 400;
+}
+
+
+/* search-bar */
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 .5rem;
+    padding: 0 12em;
+    height: 2em;
+}
+
+.search-input {
+    width: 100%;
+    font-size: inherit;
+    padding: .4em 0 .4em .7em;
+    border: 1px solid #cccccc;
+    border-top-left-radius: .12em;
+    border-bottom-left-radius: .12em;
+}
+
+.search-input:focus {
+    outline: .08em solid var(--blue);
+}
+
+.fa-search {
+    width: 1.25em;
+    height: 1.25em;
+    font-size: small;
+    color: var(--icon-idle);
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1.25rem;
+    border: 1px solid #cccccc;
+    background-color: #f8f8f8;
+    border-left: none;
+    border-top-right-radius: .12em;
+    border-bottom-right-radius: .12em;
+    cursor: pointer;
+    width: 4em;
+}
+
+.search-btn:hover {
+    background-color: #F0F0F0;
+}
+
+
+/* tool-bar */
+
+.tool-bar {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    gap: .5rem;
+}
+
+.icon-tool {
+    padding: .5em;
+    width: 2.5em;
+    height: 2.5em;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+/* -------------------------------------------- Content 1 */
+
+.content-1 {
+    background-color: white;
+    display: block;
+    padding: 6em 1em 1.5em 1em;
+}
+
+.content-1 h2 {
+    margin: 1.5em 0;
+    /* font-size: 3.2rem; */
+    font-weight: 300;
+    /* line-height: 4rem; */
+    white-space: pre-line;
+}
+
+.content-1 img {
+    width: 552px;
+}
+
+.content-1 button {
+    padding: 0.625em 1em;
+    border-radius: .12em !important;
+}
+
+.detail-content {
+    margin: 0em 1.5em 1.5em 1.5em;
+}
+
+.detail-content h4 {
+    margin: 0;
+}
+
+.detail-content h6 {
+    margin-top: 12px;
+}
+
+@media only screen and (max-width: 800px) {
+    .hidden-mobile {
+        display: none !important;
+    }
+    .w-80 {
+        width: 80% !important;
+    }
+    .content-2 {
+        padding: 2em;
+    }
+    .center-dis {
+        display: inline;
+    }
+    .myModal-head,
+    .myModal-content {
+        width: 90% !important;
+    }
+    .myModel-dialog {
+        margin-top: 15em;
+    }
+    #myBtn {
+        margin-bottom: 5em;
+    }
+}
